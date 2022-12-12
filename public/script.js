@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 function getProducts(page){
-    axios.get(`http://44.202.217.32:3000/products/?page=${page}`).then((response) => {
+    axios.get(`http://54.173.238.58:3000/products/?page=${page}`).then((response) => {
             showProductsOnScreen(response.data.products);
             showPagination(response.data);
         })
@@ -73,7 +73,7 @@ parentContainer.addEventListener('click',(e)=>{
     // if clicks on add to cart
     if (e.target.className=='shop-item-button'){
         const prodId = e.target.parentNode.parentNode.id
-        axios.post("http://44.202.217.32:3000/cart",{productId: prodId})
+        axios.post("http://54.173.238.58:3000/cart",{productId: prodId})
         .then((response) => {
             if(response.status === 200){
                 notifyUsers(response.data.message)
@@ -113,7 +113,7 @@ parentContainer.addEventListener('click',(e)=>{
 
 // show products in cart
 function getcartDetails(page){
-    axios.get(`http://44.202.217.32:3000/cart/?page=${page}`)
+    axios.get(`http://54.173.238.58:3000/cart/?page=${page}`)
         .then(response => {
             console.log(response)
             cart_items.innerHTML = " "
@@ -154,7 +154,7 @@ function getcartDetails(page){
 }
 
 function deleteItemInCart(prodId){
-    axios.post('http://44.202.217.32:3000/cart-delete-item', {productId: prodId})
+    axios.post('http://54.173.238.58:3000/cart-delete-item', {productId: prodId})
          .then(() =>{
             removeItemFromCart(prodId)
          } )
@@ -191,7 +191,7 @@ function cartPagination({currentPage,hasNextPage,hasPreviousPage,nextPage,previo
 }
 
 function addToOrders(){
-    axios.post("http://44.202.217.32:3000/create-order")
+    axios.post("http://54.173.238.58:3000/create-order")
         .then((response) => {
             if(response.status === 200){
                 notifyUsers(response.data.message)

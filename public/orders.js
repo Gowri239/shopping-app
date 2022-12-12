@@ -2,7 +2,7 @@
 const orderContent = document.getElementById('order-content');
 
 window.addEventListener('DOMContentLoaded', ()=>{
-    axios.get('http://44.202.217.32:3000/orders').then((result)=>{
+    axios.get('http://54.173.238.58:3000/orders').then((result)=>{
         if(result.data.orders.length <= 0){
             orderContent.innerHTML = 'No Orders Uptill now'            
         }else{
