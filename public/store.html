@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmi Book Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="EcommerceContainer">
+        <header>
+            <ul class='header'>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="store.html">STORE</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="orders.html">ORDERS</a></li>
+                <a href="#cart" class="cart-holder">cart</a>
+                <!-- <a href="#cart" class="cart-holder">cart<span class='cart-number'>0</span></a> -->
+            </ul>
+            <h1>Asmibooks</h1>
+        </header>
+        <section id="products" class="container">
+            <h2>PRODUCTS</h2>
+            <div id="product_content"></div>
+            <div id="pagination"></div>
+        <!--    <div id ="horror_content">
+                <div id='book1'>
+                    <h3>Book 1</h3>
+                    <div class="image-container">
+                        <img class="prod-images" src="./images/Book1.jpg" alt="">
+                    </div>
+                    <div class="prod-details">
+                        <span>$<span>12.99</span></span>
+                        <button class="shop-item-button" type='button'>ADD TO CART</button>
+                    </div>
+                </div>
+                <div id='book2'>
+                    <h3>Book 2</h3>
+                    <div class="image-container">
+                        <img class="prod-images" src="./images/Book2.jpg" alt="">
+                    </div>
+                    <div class="prod-details">
+                        <span>$<span>14.99</span></span>
+                        <button class="shop-item-button" type='button'>ADD TO CART</button>
+                    </div>
+                </div>
+                <div id='book3'>
+                    <h3>Book 3</h3>
+                    <div class="image-container">
+                        <img class="prod-images" src="./images/Book4.jpg" alt="">
+                    </div>
+                    <div class="prod-details">
+                        <span>$<span>9.99</span></span>
+                        <button class="shop-item-button" type='button'>ADD TO CART</button>
+                    </div>
+                </div>
+                <div id='book4'>
+                    <h3>Book 4</h3>
+                    <div class="image-container">
+                        <img class="prod-images" src="./images/Book5.jpg" alt="">
+                    </div>
+                    <div class="prod-details">
+                        <span>$<span>19.99</span></span>
+                        <button class="shop-item-button" type='button'>ADD TO CART</button>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+    <!--    <section id="adventure_books" class="container">
+            <h2>ADVENTURE STORIES</h2>
+            <div id="adventure_content">
+                <div id="book5">
+                    <h3>Book 1</h3>
+                    <div class="image-container">
+                        <img class="prod-images" src="./images/Book6.jpg" alt="">
+                    </div>
+                    <div class="prod-details">
+                        <span>$<span>19.99</span></span>
+                        <button class="shop-item-button" type='button'>ADD TO CART</button>
+                    </div>
+                </div>
+                <div id="book6">
+                    <h3>Book 2</h3>
+                    <div class="image-container">
+                        <img class="prod-images" src="./images/Book7.jpg" alt="">
+                    </div>
+                    <div class="prod-details">
+                        <span>$<span>6.99</span></span>
+                        <button class="shop-item-button" type='button'>ADD TO CART</button>
+                    </div>
+                </div>
+                <div id="book7">
+                    <h3>Book 3</h3>
+                    <div class="image-container">
+                        <img class="prod-images" src="./images/Book8.jpg" alt="">
+                    </div>
+                    <div class="prod-details">
+                        <span>$<span>18.99</span></span>
+                        <button class="shop-item-button" type='button'>ADD TO CART</button>
+                    </div>
+                </div>
+                <div id="book8">
+                    <h3>Book 4</h3>
+                    <div class="image-container">
+                        <img class="prod-images" src="./images/Book9.jpg" alt="">
+                    </div>
+                    <div class="prod-details">
+                        <span>$<span>16.99</span></span>
+                        <button class="shop-item-button" type='button'>ADD TO CART</button>
+                    </div>
+                </div>
+            </div> 
+        </section>   -->
+        <section id="cart" class="container">
+            <h2>CART</h2>
+            <button class="cancel">X</button>
+            <!-- <div class="cart-row cart-header">
+                <span class='cart-item cart-column'>ITEM</span>
+                <span class='cart-price cart-column'>PRICE</span>
+                <span class='cart-quantity cart-column'>QUANTITY</span>
+            </div> -->
+            <div class='cart-items'> </div>
+            <div class="cart-total">
+                <span>
+                    <span class='total-title'> <strong>Total</strong></span>
+                    $<span id='total-value' class="total-price">0</span>
+                </span>
+                <button class='purchase-btn' type='button'>ORDER NOW</button>
+            </div>
+            <!-- <button class='purchase-btn' type='button'>ORDER NOW</button> -->
+            <div id="cart_pagination"></div>
+        </section>
+        <button class="cart-btn-bottom"> <a href="#cart" class="cart-bottom">See the cart</a></button> 
+    </div>
+        
+    <div id="container"></div>    
+    <footer>
+        <div class="footer-title">
+            Asmibooks
+        </div>
+        <div class="footer-icons">
+            <ul>
+                <li><a href="https://www.youtube.com">
+                    <img src="./images/youtube logo.jpg" alt="">
+                </a></li>
+                <li><a href="https://spotify.com">
+                    <img src="./images/twitter logo.png" alt="">
+                </a></li>
+                <li><a href="https://facebook.com">
+                    <img src="./images/facebook log.png" alt="">
+                </a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"></script>
+    
+</body>
+</html>
